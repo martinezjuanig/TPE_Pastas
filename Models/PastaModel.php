@@ -19,12 +19,19 @@
         
     }
 
-    // function getPasta($id){
+    function addPasta(String $nombre, String $fk_harina){
+        $sentence = $this->db_connection->prepare(
+        "INSERT INTO pasta (nombre, fk_harina) VALUES (?, ?)"
+        );
+        $sentence->execute(array($nombre, $fk_harina));
+    }
+
+    // function getOne($id){
     //     $sentence = $this->$db_connection->prepare("select from * pastas" . "WHERE id_pasta=?");
     //     $sentence = execute(array($id));
     //     return $sentence-> fetch(PDO::FETCH_OBJ);
 
-    // }
+     }
 
     // function savePastas(){
         

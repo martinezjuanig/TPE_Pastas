@@ -11,10 +11,9 @@ $partesURL = explode("/", $action);
 switch ($partesURL [ACTION]) {
     case 'pastas':
         $controller = new pastasController();
-        $controller -> showPastas();
-       
-    
+        $controller -> showAll();        
         break;
+    case ''
 }
 
 

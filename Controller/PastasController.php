@@ -12,7 +12,13 @@ class pastasController {
 
     }
 
+    public function addPasta(){
+        
+    }
+
 }
+
+
 
 
 ?>
