@@ -11,11 +11,13 @@ $partesURL = explode("/", $action);
 switch ($partesURL [ACTION]) {
     case 'pastas':
         $controller = new pastasController();
+        $controller->showAll();        
+        break;
+    case 'default':
+        $controller = new pastasController();
         $controller -> showAll();        
         break;
-    case ''
+    
 }
-
-
 
 ?>

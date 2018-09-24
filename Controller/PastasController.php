@@ -4,11 +4,11 @@ require_once 'Views/PastaView.php';
 
 
 class pastasController {
-    public function showPastas (){
+    public function showAll (){
         $pastamodel = new PastaModel();
         $pastas = $pastamodel->getAll();
         $view = new PastaView();
-        $view -> showPastas($pastas);
+        $view -> showAll($pastas);
 
     }
 

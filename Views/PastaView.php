@@ -13,12 +13,10 @@
 
         public function showAll ($pastas)
         {
-
-        $smarty = new Smarty();
-        $smarty->assign('tablaPastas',$pastas);
-        $smarty->assign('basehref',$this->basehref); 
-        $smarty->display('templates/pastasTable.tpl');
-
+            $smarty = new Smarty();
+            $smarty->assign('tablaPastas',$pastas);
+            $smarty->assign('basehref',$this->basehref); 
+            $smarty->display('templates/pastasTable.tpl');
         }
     }
 ?>

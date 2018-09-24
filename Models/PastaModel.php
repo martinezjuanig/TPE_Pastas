@@ -3,7 +3,8 @@
  {
     private $db_connection;
 
-    function __construct(){
+    function __construct()
+    {
         $this->db_connection= new PDO
         ('mysql:host=localhost;'.
         'dbname=pastas;charset=utf8',
@@ -19,7 +20,8 @@
         
     }
 
-    function addPasta(String $nombre, String $fk_harina){
+    function addPasta(String $nombre, String $fk_harina)
+    {
         $sentence = $this->db_connection->prepare(
         "INSERT INTO pasta (nombre, fk_harina) VALUES (?, ?)"
         );
@@ -31,7 +33,7 @@
     //     $sentence = execute(array($id));
     //     return $sentence-> fetch(PDO::FETCH_OBJ);
 
-     }
+    //  }
 
     // function savePastas(){
         
@@ -39,7 +41,7 @@
 
 
     // }
- }
+}
  
 
 
