@@ -14,7 +14,7 @@
     function getAll()
     {
         $sentence = $this->db_connection->prepare(
-        "select * from pasta, harina");
+        "select * from pasta");
         $sentence->execute();
         return $sentence-> fetchAll(PDO::FETCH_OBJ);
 

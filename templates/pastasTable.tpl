@@ -12,7 +12,7 @@
         <tbody>
             <tr>
             <td>{$pasta->nombre}</td>
-            <td>{$pasta->tipo}</td>
+            <td>{$pasta->fk_harina}</td>
             <td>@mdo</td>
             </tr>
         </tbody>
