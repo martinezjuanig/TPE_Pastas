@@ -13,7 +13,7 @@ switch ($partesURL [ACTION]) {
         $controller = new pastasController();
         $controller->showAll();        
         break;
-    case 'default':
+    default:
         $controller = new pastasController();
         $controller -> showAll();        
         break;
