@@ -1,4 +1,3 @@
-<script src="jquery/jquery-3.3.1.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
+    <script src="css/bootstrap-4.3.1/js/bootstrap.min.js"></script>
 </html>

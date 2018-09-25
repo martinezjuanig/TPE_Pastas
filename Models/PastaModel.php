@@ -25,8 +25,7 @@
     function addPasta(String $nombre, String $fk_harina)
     {
         $sentence = $this->db_connection->prepare(
-        "INSERT INTO pasta (nombre, fk_harina) VALUES (?, ?)"
-        );
+        "INSERT INTO pasta (nombre, fk_harina) VALUES (?, ?)");
         $sentence->execute(array($nombre, $fk_harina));
     }
 

@@ -17,6 +17,15 @@
             $smarty->assign('tablaPastas',$pastas);
             $smarty->assign('basehref',$this->basehref); 
             $smarty->display('templates/pastasTable.tpl');
+           
+        }
+
+        public function AdminShow($pastas)
+        {
+            $smarty = new Smarty();
+            $smarty->assign('tablaPastas', $pastas);
+            $smarty->assign('basehref', $this->basehref);
+            $smarty->display('templates/tableAdmin.tpl');
         }
     }
 ?>

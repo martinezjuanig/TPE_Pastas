@@ -11,9 +11,23 @@ class pastasController {
         $view -> showAll($pastas);
 
     }
-
+    
     public function addPasta(){
+        if (isset($_POST["pasta"])) {
+            $pasta=$_POST["pasta"];
+            $model=new PastaModel();
+            $model->addPasta($pasta);
+        }
+        header("Location: ver");
         
+    }
+    public function AdminShow()
+    {
+        $pastamodel = new PastaModel();
+        $pastas = $pastamodel->getAll();
+        $view = new PastaView();
+        $view->AdminShow($pastas);
+
     }
 
 }
