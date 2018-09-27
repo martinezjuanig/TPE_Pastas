@@ -25,13 +25,20 @@
     <form method="POST" action="save">
         <div class="row">
             <div class="col">
-            <input type="text" class="form-control" placeholder="Ingrese Pasta">
+                <input type="text" class="form-control" placeholder="Ingrese Pasta">
             </div>
             </div>
                 <select class="custom-select" id="inputGroupSelect01">
                 {foreach from=$tablaPastas item=pasta}
-                    <option selected>Harina...</option>
-                    <option value={$pasta->fk_harina}>{$harina->tipo}</option>
+                    {* <option selected>Harina...</option> *}
+                    <option value={$pasta->fk_harina}>{if $pasta->fk_harina==1}
+                            Integral
+                        {elseif $pasta->fk_harina==2}
+                            Blanca
+                        {else}
+                            Mandioca
+                        {/if}
+                    </option>
                     {/foreach}
                 </select>
             </div>

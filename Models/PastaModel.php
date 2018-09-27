@@ -11,7 +11,7 @@
         'root','');
     }
 
-    function getAll()
+    function getAllPastas()
     {
         $sentence = $this->db_connection->prepare(
         "select * from pasta");

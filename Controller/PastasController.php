@@ -1,14 +1,18 @@
 <?php
 require_once 'Models/PastaModel.php';
 require_once 'Views/PastaView.php';
+require_once 'Views/HomeView.php';
 
 
-class pastasController {
+
+class PastasController {
     public function showAll (){
+        $view=new ViewHome();
+        $view->showHome();
         $pastamodel = new PastaModel();
-        $pastas = $pastamodel->getAll();
+        $pastas = $pastamodel->getAllPastas();
         $view = new PastaView();
-        $view -> showAll($pastas);
+        $view->showAll($pastas);
 
     }
     
@@ -16,7 +20,7 @@ class pastasController {
         if (isset($_POST["pasta"])) {
             $pasta=$_POST["pasta"];
             $model=new PastaModel();
-            $model->addPasta($pasta);
+            $model->addPasta($pasta, $fk_harina);
         }
         header("Location: ver");
         
@@ -26,7 +30,8 @@ class pastasController {
         $pastamodel = new PastaModel();
         $pastas = $pastamodel->getAll();
         $view = new PastaView();
-        $view->AdminShow($pastas);
+        $harinas = ["hola", "d"];
+        $view->AdminShow($pastas, $harinas);
 
     }
 
@@ -35,4 +40,3 @@ class pastasController {
 
 
 
-?>

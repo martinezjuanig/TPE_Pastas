@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-25 18:18:04
+/* Smarty version 3.1.32, created on 2018-09-27 04:46:21
   from 'C:\xampp\htdocs\TPE_Pastas\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5baa5fbc5f32c8_64167069',
+  'unifunc' => 'content_5bac447d57f2c1_82062168',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '331389404c0406745a8f1740a23348065280890b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_Pastas\\templates\\header.tpl',
-      1 => 1537892273,
+      1 => 1538016379,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5baa5fbc5f32c8_64167069 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bac447d57f2c1_82062168 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,20 +35,23 @@ function content_5baa5fbc5f32c8_64167069 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="home">"Pasta Man"</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pastas</a>
+            <a class="nav-link" href="pasta">Pastas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../formLogin.tpl">Login</a>
+            <a class="nav-link" href="harina">Harinas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=loginForm>Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>

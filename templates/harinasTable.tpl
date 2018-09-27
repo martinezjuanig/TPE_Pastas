@@ -4,19 +4,19 @@
       <table class="table">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">Pasta</th>
+            <th scope="col">Harina</th>
             <th scope="col"></th>
           </tr>
         </thead>
-        {foreach from=$tablaPastas item=pasta}
-              <tbody>
-                  <tr>
-                    <td>{$pasta->nombre}</td>
-                    <td></td>
-                  </tr>
-              </tbody>
+        {foreach from=$tablaHarinas item=harina}
+          <tbody>
+            <tr>
+              <td>{$harina->tipo}</td>
+              <td> </td>
+            </tr>
+          </tbody>
         {/foreach}
-      </table>
+    </table>
     </div>
   </div>
 </div>

@@ -27,5 +27,6 @@
             $smarty->assign('basehref', $this->basehref);
             $smarty->display('templates/tableAdmin.tpl');
         }
+
     }
 ?>
