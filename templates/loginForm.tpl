@@ -4,7 +4,7 @@
     <div class="col-12">
       <div class="row-center">
         <div class="col-md-6 col-md-offset-3">
-          <form>
+          <form action="verify" method="post">
             <div class="form-group">
               <label for="exampleInputEmail1">Name</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
@@ -27,8 +27,7 @@
         </div>
       </div>
     </div>
-  </div>
-  
+  </div> 
 {include file="footer.tpl"}
 
 

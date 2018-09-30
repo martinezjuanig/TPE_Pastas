@@ -2,7 +2,7 @@
 
 class HarinasModel {
 
-    private $db_conection;
+    private $db_connection;
     function __construct()
     {
         $this->db_connection = new PDO

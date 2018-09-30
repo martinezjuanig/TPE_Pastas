@@ -3,6 +3,7 @@ require_once 'Controller/PastasController.php';
 require_once 'Controller/HarinaController.php';
 require_once 'Controller/HomeController.php';
 require_once 'Controller/LoginController.php';
+require_once 'Controller/AdminController.php';
 
 define('ACTION', 0);
 define('ID', 1);
@@ -34,6 +35,16 @@ switch ($partesURL[ACTION]) {
     case 'loginForm':
         $controller=new LoginController();
         $controller->showLogin();        
+        break;
+
+    case 'verify':
+        $controller=new AdminController();
+        $controller->AdminMenu();        
+        break;
+
+    case 'delete':
+        $controller=new AdminController();
+        $controller->delete($partesURL[ID]);        
         break;
 
     case 'home':   
