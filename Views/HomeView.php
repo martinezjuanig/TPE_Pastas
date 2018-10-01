@@ -1,5 +1,5 @@
 <?php
-
+require_once 'Models/PastasModel.php'; 
 require_once "libs/Smarty.class.php";   
 class ViewHome{
 
@@ -12,8 +12,9 @@ class ViewHome{
        
 
     }
-    public function showHome(){
+    public function showHome($pastas){
         $smarty = new Smarty();
+        $smarty->assign('db_pastas', $pastas);
         $smarty->assign('basehref', $this->basehref); 
         $smarty->display('templates/home.tpl');
     }

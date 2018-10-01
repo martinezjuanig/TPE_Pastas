@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-27 04:46:21
+/* Smarty version 3.1.32, created on 2018-10-01 07:09:34
   from 'C:\xampp\htdocs\TPE_Pastas\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bac447d57f2c1_82062168',
+  'unifunc' => 'content_5bb1ac0eccaed6_83409703',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '331389404c0406745a8f1740a23348065280890b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_Pastas\\templates\\header.tpl',
-      1 => 1538016379,
+      1 => 1538370573,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bac447d57f2c1_82062168 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bb1ac0eccaed6_83409703 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,8 +30,7 @@ function content_5bac447d57f2c1_82062168 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <link rel="stylesheet" href="css/bootstrap-4.1.3/css/bootstrap.min.css">
-    <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
-</title>
+    <title>PastaMan</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -58,5 +57,6 @@ function content_5bac447d57f2c1_82062168 (Smarty_Internal_Template $_smarty_tpl)
           </li>
         </ul>
       </div>
-</nav><?php }
+</nav>
+<div class="container-fluid"><?php }
 }

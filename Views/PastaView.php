@@ -1,5 +1,5 @@
 <?php
-    require_once 'Models/PastaModel.php'; 
+    require_once 'Models/PastasModel.php'; 
     require_once "libs/Smarty.class.php";
 
     class PastaView{
@@ -11,7 +11,7 @@
             . dirname($_SERVER['PHP_SELF']) . '/'; 
         }
 
-        public function showAll ($pastas)
+        public function showAll($pastas)
         {
             $smarty = new Smarty();
             $smarty->assign('tablaPastas',$pastas);
@@ -20,13 +20,12 @@
            
         }
 
-        public function AdminShow($pastas)
-        {
-            $smarty = new Smarty();
-            $smarty->assign('tablaPastas', $pastas);
-            $smarty->assign('basehref', $this->basehref);
-            $smarty->display('templates/tableAdmin.tpl');
-        }
+        // public function AdminShow($pastas)
+        // {
+        //     $smarty = new Smarty();
+        //     $smarty->assign('tablaPastas', $pastas);
+        //     $smarty->assign('basehref', $this->basehref);
+        //     $smarty->display('templates/tableAdmin.tpl');
+        // }
 
     }
-?>

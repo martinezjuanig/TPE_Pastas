@@ -1,5 +1,5 @@
 <?php
-require_once 'Models/HarinaModel.php';
+require_once 'Models/HarinasModel.php';
 require_once 'libs/Smarty.class.php';
 
     class HarinaView

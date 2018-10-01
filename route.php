@@ -1,6 +1,6 @@
 <?php
 require_once 'Controller/PastasController.php';
-require_once 'Controller/HarinaController.php';
+require_once 'Controller/HarinasController.php';
 require_once 'Controller/HomeController.php';
 require_once 'Controller/LoginController.php';
 require_once 'Controller/AdminController.php';
@@ -19,7 +19,7 @@ switch ($partesURL[ACTION]) {
 
     case 'pasta': 
         $controller=new PastasController();
-        $controller->showAll();
+        $controller->showAllpasta();
     break;
 
     case 'harina': 
@@ -27,31 +27,36 @@ switch ($partesURL[ACTION]) {
         $controller->showAllHarinas();
     break;
     
-    case 'save':
-        $controller=new PastasController();
-        $controller->addPasta();        
-        break;
-
     case 'loginForm':
-        $controller=new LoginController();
-        $controller->showLogin();        
-        break;
+    $controller=new LoginController();
+    $controller->showLogin();        
+    break;
 
-    case 'verify':
+    case 'admin':
         $controller=new AdminController();
         $controller->AdminMenu();        
         break;
 
+    case 'save':
+        $controller=new PastasController();
+        $controller->addPasta();        
+        break;
+    
     case 'delete':
-        $controller=new AdminController();
+        $controller=new PastasController();
         $controller->delete($partesURL[ID]);        
+        break;
+
+    case 'editPasta':
+        $controller=new AdminController();
+        $controller->editPasta($partesURL[ID]);        
         break;
 
     case 'home':   
         
     default:
-        $controller = new HomeController();
-        $controller->showHome(); 
+        $controller = new PastasController();
+        $controller->ShowAllDb(); 
         break;
     
 }

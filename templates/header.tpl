@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <link rel="stylesheet" href="css/bootstrap-4.1.3/css/bootstrap.min.css">
-    <title>{$titulo}</title>
+    <title>PastaMan</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -34,3 +34,4 @@
         </ul>
       </div>
 </nav>
+<div class="container-fluid">

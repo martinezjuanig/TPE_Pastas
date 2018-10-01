@@ -12,9 +12,10 @@ class AdminView
         $this->basehref = '//' . $_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']) . '/';
     }
 
-    public function AdminShowAll($pastas)
+    public function AdminShowAll($harinas,$pastas)
     {
         $smarty= new Smarty();
+        $smarty->assign('db_harinas', $harinas);
         $smarty->assign('db_pastas', $pastas);
         $smarty->assign('basehref', $this->basehref);
         $smarty->display('templates/admin.tpl');
