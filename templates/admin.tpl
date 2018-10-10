@@ -16,6 +16,7 @@
           <tbody>
             <tr>
               <td>{$pastas->nombre}</td>
+              {* <td>{$pastas->id_harina}</td> *}
               <td><a href="delete/{$pastas->id_pasta}/">Borrar</a></td>
               <td><a href="editPasta/{$pastas->id_pasta}/">Editar</a></td>
               
@@ -26,22 +27,39 @@
     </div>
   
 
-    <div class="col-6 col-md-6 ">   
-      <form method="POST" action="save">
-        <div class="row">
-          <div class="col">
-            <input type="text" name='pasta' class="form-control" placeholder="Ingrese Pasta">
-          </div>
-          </div>
-            <select class="custom-select" name="harina" id="inputGroupSelect01">
-              {foreach from=$db_harinas item=harinas}
-                <option value={$harinas->id_harina}>{$harinas->tipo}</option>
-              {/foreach}
-            </select>
-            <button type="submit">Agregar</button>
-          </div>
+    <div class="col-6 col-md-6 ">  
+      <div class="row "> 
+
+        <div class="col-12 ">  
+          <form method="POST" action="savePasta">
+            <div class="row">
+              <div class="col">
+                <input type="text" name='pasta' class="form-control" placeholder="Ingrese Pasta">
+              
+                <select class="custom-select" name="harinas" id="inputGroupSelect01">
+                  {foreach from=$db_harinas item=harinas}
+                    <option value={$harinas->id_harina}>{$harinas->tipo}</option>
+                  {/foreach}
+                </select>
+                <button type="submit">Agregar</button>
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
+        
+
+        <div class="col-12"> </div>
+          
+        <div class="col-12">
+          <form method="POST" action="saveHarina">
+            <input type="text" name='harina' class="form-control" placeholder="Agregar Harina">
+            <button type="submit">Agregar Harina</button>
+          </form>
+        </div>
+        
+      </div>
     </div>
+
+
   </div>
 {include file="footer.tpl"}

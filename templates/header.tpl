@@ -26,10 +26,10 @@
             <a class="nav-link" href="harina">Harinas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href=loginForm>Login</a>
+            <a class="nav-link" href=loginForm>LogIn</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link" href=logOut>LogOut</a>
           </li>
         </ul>
       </div>

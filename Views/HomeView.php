@@ -18,4 +18,8 @@ class ViewHome{
         $smarty->assign('basehref', $this->basehref); 
         $smarty->display('templates/home.tpl');
     }
+
+    
+
+    
 }

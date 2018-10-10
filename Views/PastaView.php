@@ -20,12 +20,14 @@
            
         }
 
-        // public function AdminShow($pastas)
-        // {
-        //     $smarty = new Smarty();
-        //     $smarty->assign('tablaPastas', $pastas);
-        //     $smarty->assign('basehref', $this->basehref);
-        //     $smarty->display('templates/tableAdmin.tpl');
-        // }
+        public function showOne($pasta)
+        {
+            $smarty = new Smarty();
+            $smarty->assign('pasta', $pasta);
+            $smarty->assign('basehref', $this->basehref);
+            $smarty->display('templates/onePasta.tpl');
+        }
+
+        
 
     }

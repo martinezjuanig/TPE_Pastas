@@ -1,5 +1,5 @@
 <?php
-require_once 'Models/AdminModel.php';
+require_once 'Models/UserModel.php';
 require_once 'libs/Smarty.class.php';
 
 

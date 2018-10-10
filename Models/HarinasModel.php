@@ -17,8 +17,13 @@ class HarinasModel {
             "select * from harina");
         $sentence->execute();
         return $sentence->fetchAll(PDO::FETCH_OBJ);
-
-
-
     }
+
+    function addharina(String $tipo)
+    {
+        $sentence = $this->db_connection->prepare("INSERT INTO harina(tipo) VALUE (?)");
+        $sentence->execute(array($tipo));
+    }
+
+    
 }

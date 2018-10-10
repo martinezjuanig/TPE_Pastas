@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-01 07:09:34
+/* Smarty version 3.1.32, created on 2018-10-03 05:14:37
   from 'C:\xampp\htdocs\TPE_Pastas\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bb1ac0eccaed6_83409703',
+  'unifunc' => 'content_5bb4341d133438_35859349',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '331389404c0406745a8f1740a23348065280890b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_Pastas\\templates\\header.tpl',
-      1 => 1538370573,
+      1 => 1538536353,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bb1ac0eccaed6_83409703 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bb4341d133438_35859349 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,10 +50,10 @@ function content_5bb1ac0eccaed6_83409703 (Smarty_Internal_Template $_smarty_tpl)
             <a class="nav-link" href="harina">Harinas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href=loginForm>Login</a>
+            <a class="nav-link" href=loginForm>LogIn</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link" href=logOut>LogOut</a>
           </li>
         </ul>
       </div>

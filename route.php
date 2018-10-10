@@ -22,14 +22,29 @@ switch ($partesURL[ACTION]) {
         $controller->showAllpasta();
     break;
 
+    case 'detalle': 
+        $controller=new PastasController();
+        $controller->ShowOne($partesURL[ID]);
+    break;
+
     case 'harina': 
         $controller=new HarinasController();
         $controller->showAllHarinas();
     break;
     
     case 'loginForm':
-    $controller=new LoginController();
-    $controller->showLogin();        
+        $controller=new LoginController();
+        $controller->showLogin();        
+    break;
+
+    case 'logIn':
+        $controller=new LoginController();
+        $controller->logIn();        
+    break;
+
+    case 'logOut':
+        $controller=new LoginController();
+        $controller->logOut();        
     break;
 
     case 'admin':
@@ -37,13 +52,17 @@ switch ($partesURL[ACTION]) {
         $controller->AdminMenu();        
         break;
 
-    case 'save':
-        $controller=new PastasController();
+    case 'savePasta':
+        $controller=new AdminController();
         $controller->addPasta();        
         break;
-    
+
+    case 'saveHarina':
+        $controller=new AdminController();
+        $controller->addHarina();
+        break;
     case 'delete':
-        $controller=new PastasController();
+        $controller=new AdminController();
         $controller->delete($partesURL[ID]);        
         break;
 
