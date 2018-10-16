@@ -1,7 +1,6 @@
 <?php
 require_once 'Controller/PastasController.php';
 require_once 'Controller/HarinasController.php';
-require_once 'Controller/HomeController.php';
 require_once 'Controller/LoginController.php';
 require_once 'Controller/AdminController.php';
 

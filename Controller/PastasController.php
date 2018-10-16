@@ -1,5 +1,4 @@
 <?php
-// esta bien uncluir editar, eliminar y agregar en este controller o va en admincontroller?
 
 require_once 'Models/PastasModel.php';
 require_once 'Models/UserModel.php';

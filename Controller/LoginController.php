@@ -1,11 +1,9 @@
 <?php
 
 require_once 'Views/LoginView.php';
-require_once 'Controller/Controller.php';
 
 
-
-class LoginController extends Controller
+class LoginController
 {
     public function showLogin()
     {   
