@@ -9,7 +9,7 @@
 
             <div class="form-group">
               <label for="user">Name</label>
-              <input type="text" class="form-control" name="username"id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+              <input type="text" class="form-control" name="username"id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" required>
             </div>
 
             {* <div class="form-group">
@@ -20,7 +20,7 @@
 
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+              <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password" required>
             </div>
 
             {* <div class="form-check">

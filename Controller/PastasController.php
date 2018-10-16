@@ -21,7 +21,7 @@ class PastasController {
 
     public function showAllPasta (){
         $pastamodel = new PastasModel();
-        $pastas = $pastamodel->getAllPastas();
+        $pastas = $pastamodel->getAllDb();
         $view = new PastaView();
         $view->showAll($pastas);
 

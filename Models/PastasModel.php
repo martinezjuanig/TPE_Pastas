@@ -1,6 +1,6 @@
 <?php
- class PastasModel
- {
+class PastasModel
+{
     private $db_connection;
 
     function __construct()
@@ -34,7 +34,6 @@
         $sentence->execute(array($nombre, $tipo));
     }
 
-
     function getOne($id_pasta)
     {
         $sentence = $this->db_connection->prepare("SELECT * FROM pasta, harina WHERE pasta.fk_harina=harina.id_harina and pasta.id_pasta=? ");
@@ -42,10 +41,11 @@
         return $sentence->fetch(PDO::FETCH_OBJ);
 
     }
-    function editPasta($id_pasta, $nombrePasta)
+
+    function editPasta( String $nombre, $id_pasta)
     {
-        $sentence = $this->db_connection->prepare("UPDATE pasta SET nombre= '$nombrePasta' WHERE id_pasta=?");
-        $sentence->execute(array($id_pasta));
+        $sentence = $this->db_connection->prepare("UPDATE pasta SET nombre= ? WHERE id_pasta=?");
+        $sentence->execute(array($nombre, $id_pasta));
     }
 
     function delete($id_pasta)

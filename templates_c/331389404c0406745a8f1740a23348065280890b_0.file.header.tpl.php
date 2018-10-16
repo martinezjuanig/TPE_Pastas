@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-03 05:14:37
+/* Smarty version 3.1.32, created on 2018-10-13 21:31:06
   from 'C:\xampp\htdocs\TPE_Pastas\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bb4341d133438_35859349',
+  'unifunc' => 'content_5bc247fa5cdf09_41193030',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '331389404c0406745a8f1740a23348065280890b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_Pastas\\templates\\header.tpl',
-      1 => 1538536353,
+      1 => 1539459061,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bb4341d133438_35859349 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc247fa5cdf09_41193030 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,6 +30,7 @@ function content_5bb4341d133438_35859349 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <link rel="stylesheet" href="css/bootstrap-4.1.3/css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/bootstrap-4.1.3/css/estyle.css">
     <title>PastaMan</title>
 </head>
 <body>
@@ -58,5 +59,5 @@ function content_5bb4341d133438_35859349 (Smarty_Internal_Template $_smarty_tpl)
         </ul>
       </div>
 </nav>
-<div class="container-fluid"><?php }
+<div class="container"><?php }
 }

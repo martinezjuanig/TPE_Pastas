@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-03 05:14:53
+/* Smarty version 3.1.32, created on 2018-10-10 22:19:32
   from 'C:\xampp\htdocs\TPE_Pastas\templates\loginForm.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bb4342d4ad9a9_46699333',
+  'unifunc' => 'content_5bbe5ed44e7d46_90230295',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2e0536f059cc6de23ed22e803b6ff7c2e9355f21' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_Pastas\\templates\\loginForm.tpl',
-      1 => 1538536308,
+      1 => 1539202767,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bb4342d4ad9a9_46699333 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bbe5ed44e7d46_90230295 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -35,13 +35,13 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 
             <div class="form-group">
               <label for="user">Name</label>
-              <input type="text" class="form-control" name="username"id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+              <input type="text" class="form-control" name="username"id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" required>
             </div>
 
             
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+              <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password" required>
             </div>
 
             

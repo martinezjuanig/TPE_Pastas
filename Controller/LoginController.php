@@ -23,13 +23,13 @@ class LoginController
                 session_start();
                 header("location: admin");
                 die();
+            } else {
+                $view = new LoginView();
+                $view->showLoginForm();
             }
 
             
-        } else {
-            $view=new LoginView();
-            $view->showLoginForm();
-        }
+        } 
         
     }
 

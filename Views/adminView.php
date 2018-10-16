@@ -23,5 +23,13 @@ class AdminView
 
     }
     
+    public function showOnePasta($pasta)
+    {
+        $smarty=new Smarty();
+        $smarty->assign('pasta', $pasta);
+        $smarty->assign('basehref', $this->basehref);
+        $smarty->display('adminPasta.tpl');
+    }
+    
 }
 

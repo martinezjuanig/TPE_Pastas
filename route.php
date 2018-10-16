@@ -61,14 +61,21 @@ switch ($partesURL[ACTION]) {
         $controller=new AdminController();
         $controller->addHarina();
         break;
+
     case 'delete':
         $controller=new AdminController();
         $controller->delete($partesURL[ID]);        
         break;
 
+    case 'adminPasta':
+        $controller=new AdminController();
+        $controller->showOne($partesURL[ID]);        
+        break;
+        
+   
     case 'editPasta':
         $controller=new AdminController();
-        $controller->editPasta($partesURL[ID]);        
+        $controller->editPasta();        
         break;
 
     case 'home':   
