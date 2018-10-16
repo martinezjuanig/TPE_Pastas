@@ -1,9 +1,11 @@
 <?php
 
 require_once 'Views/LoginView.php';
+require_once 'Controller/Controller.php';
 
 
-class LoginController
+
+class LoginController extends Controller
 {
     public function showLogin()
     {   
@@ -21,7 +23,10 @@ class LoginController
             $user=$model->getUser($username);
             if (!empty($user) && password_verify($password, $user['password'])) {
                 session_start();
-                header("location: admin");
+                $_SESSION['USERNAME'] = $username;
+                $_SESSION['ID'] = $user["id_usuario"];
+                $_SESSION['LAST_ACTIVITY'] = time();
+                header('location:' . ADMIN);
                 die();
             } else {
                 $view = new LoginView();
@@ -37,7 +42,7 @@ class LoginController
     {
         session_start();
         session_destroy();
-        header("location: loginForm");
+        header('location:' . LOGINFORM);
         die();
 
     }

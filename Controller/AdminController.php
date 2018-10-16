@@ -3,8 +3,9 @@ require_once 'Models/UserModel.php';
 require_once 'Models/HarinasModel.php';
 require_once 'Models/PastasModel.php';
 require_once 'Views/adminView.php';
+require_once 'Controller/SessionController.php';
 
-class AdminController
+class AdminController extends SessionController
 {
     public function AdminMenu()
     {
@@ -26,7 +27,7 @@ class AdminController
             $model->addPasta($pasta, $harina);
         }
 
-        header("Location: admin");
+        header('Location:' . ADMIN);
 
     }
 
@@ -38,7 +39,7 @@ class AdminController
             $model->addHarina($harinaTipo);
         }
        
-        header("Location: admin");
+        header('Location:' . ADMIN);
     }
 
     public function delete($id_pasta)
@@ -47,7 +48,8 @@ class AdminController
         $pastas = $adminmodel->delete($id_pasta);
         
 
-        header("Location: ../../admin");
+        header('Location:' . ADMIN);
+
     }
 
     public function showOne($id_pasta)
@@ -65,7 +67,8 @@ class AdminController
         $id_pasta=$_POST["id_pasta"];
         $model=new PastasModel();
         $model->editPasta($nombre, $id_pasta);
-        header("Location: admin");
+        header('Location:' . ADMIN);
+
     }
 
     
