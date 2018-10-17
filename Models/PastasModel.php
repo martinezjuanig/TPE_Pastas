@@ -30,8 +30,9 @@ class PastasModel
     function addPasta(String $nombre, String $tipo)
     {
         $sentence = $this->db_connection->prepare(
-        "INSERT INTO pasta (nombre, fk_harina) VALUES (?, ?)");
+            "INSERT INTO pasta (nombre, fk_harina) VALUES (?, ?)");
         $sentence->execute(array($nombre, $tipo));
+        
     }
 
     function getOne($id_pasta)
@@ -47,6 +48,7 @@ class PastasModel
         $sentence = $this->db_connection->prepare("UPDATE pasta SET nombre= ? WHERE id_pasta=?");
         $sentence->execute(array($nombre, $id_pasta));
     }
+
 
     function delete($id_pasta)
     {

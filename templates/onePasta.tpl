@@ -4,7 +4,7 @@
     <table class="table">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">Pastas</th>
+          <th scope="col">Pasta</th>
           <th scope="col">Harina</th>
         </tr>
       </thead>
@@ -12,7 +12,6 @@
           <tr>
             <td>{$pasta->nombre}</td>
             <td>{$pasta->tipo}</td>
-            <td></td>
           </tr>
         </tbody>
     </table>

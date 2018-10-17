@@ -9,22 +9,21 @@ class AdminController extends SessionController
 {
     public function AdminMenu()
     {
-        
-        $pastamodel=new PastasModel();
-        $pastas=$pastamodel->getAllPastas();
+        $model=new PastasModel();
+        $db_pastas=$model->GetAllDb();
         $adminmodel=new HarinasModel();
         $harinas=$adminmodel->getAllHarinas();
         $view=new AdminView();
-        $view->AdminShowAll($harinas,$pastas);
+        $view->AdminShowAll($db_pastas,$harinas);
     }
 
     public function addPasta()
     {
-        if (isset($_POST["pasta"])) {
-            $pasta = $_POST["pasta"];
-            $harina = $_POST["harinas"];
+        if (isset($_POST["pasta"]) && (isset($_POST["harina"]))) {
+            $pasta=$_POST["pasta"];
+            $tipo=$_POST["harina"];
             $model = new PastasModel();
-            $model->addPasta($pasta, $harina);
+            $model->addPasta($pasta, $tipo);
         }
 
         header('Location:' . ADMIN);
@@ -52,7 +51,7 @@ class AdminController extends SessionController
 
     }
 
-    public function showOne($id_pasta)
+    public function showOnePasta($id_pasta)
     {
         $model=new PastasModel();
         $pasta=$model->getOne($id_pasta);
@@ -67,8 +66,30 @@ class AdminController extends SessionController
         $id_pasta=$_POST["id_pasta"];
         $model=new PastasModel();
         $model->editPasta($nombre, $id_pasta);
+
         header('Location:' . ADMIN);
 
+    }
+
+    public function showOneHarina($id_harina)
+    {
+        $model = new HarinasModel();
+        $harina = $model->getOne($id_harina);
+        $harinasmodel=new HarinasModel();
+        $harinas = $harinasmodel->getAllHarinas();
+        $view = new AdminView();
+        $view->showOneHarina($harina);
+
+    }
+
+    public function editHarina()
+    {
+        $tipo=$_POST["tipo"];
+        $id_harina=$_POST["id_harina"];
+        $model=new HarinasModel();
+        $model->editHarina($tipo, $id_harina);
+
+        header('Location:' . ADMIN);
     }
 
     

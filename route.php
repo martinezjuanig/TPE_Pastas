@@ -34,7 +34,7 @@ switch ($partesURL[ACTION]) {
     
     case 'loginForm':
         $controller=new LoginController();
-        $controller->showLogin();        
+        $controller->showLoginForm();        
     break;
 
     case 'logIn':
@@ -69,13 +69,23 @@ switch ($partesURL[ACTION]) {
 
     case 'adminPasta':
         $controller=new AdminController();
-        $controller->showOne($partesURL[ID]);        
+        $controller->showOnePasta($partesURL[ID]);        
         break;
         
    
     case 'editPasta':
         $controller=new AdminController();
         $controller->editPasta();        
+        break;
+
+    case 'adminHarina':
+        $controller=new AdminController();
+        $controller->showOneHarina($partesURL[ID]);        
+        break;
+
+    case 'editHarina':
+        $controller = new AdminController();
+        $controller->editHarina();
         break;
 
     case 'home':   

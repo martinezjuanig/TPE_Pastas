@@ -12,10 +12,11 @@ class LoginView
             . dirname($_SERVER['PHP_SELF']) . '/'; 
     }
     
-    public function showLoginForm()
+    public function showLoginForm($error="")
     {
         $smarty=new Smarty();
         $smarty->assign('basehref', $this->basehref);
+        $smarty->assign('error', $error);
         $smarty->display('templates/loginForm.tpl');
     }
     

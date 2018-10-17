@@ -5,7 +5,7 @@ require_once 'Views/LoginView.php';
 
 class LoginController
 {
-    public function showLogin()
+    public function showLoginForm()
     {   
         $view=new LoginView();
         $view->showLoginForm();
@@ -22,18 +22,15 @@ class LoginController
             if (!empty($user) && password_verify($password, $user['password'])) {
                 session_start();
                 $_SESSION['USERNAME'] = $username;
-                $_SESSION['ID'] = $user["id_usuario"];
                 $_SESSION['LAST_ACTIVITY'] = time();
                 header('location:' . ADMIN);
                 die();
+
             } else {
                 $view = new LoginView();
-                $view->showLoginForm();
+                $view->showLoginForm("Usuario o contraseña incorrecta");
             }
-
-            
-        } 
-        
+        }   
     }
 
     public function logOut()
@@ -42,6 +39,5 @@ class LoginController
         session_destroy();
         header('location:' . LOGINFORM);
         die();
-
     }
 }

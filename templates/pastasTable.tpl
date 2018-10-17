@@ -7,14 +7,12 @@
             <thead class="thead-dark">
               <tr>
                 <th scope="col">Pasta</th>
-                {* <th scope="col"></th> *}
               </tr>
             </thead>
           {foreach from=$tablaPastas item=pasta}
             <tbody>
               <tr>
                 <td>{$pasta->nombre}</td>
-                {* <td>{$pasta->tipo}</td> *}
               </tr>
             </tbody>
           {/foreach}

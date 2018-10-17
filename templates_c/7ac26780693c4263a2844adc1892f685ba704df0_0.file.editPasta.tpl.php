@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-17 00:33:46
-  from 'C:\xampp\htdocs\TPE_Pastas\templates\adminPasta.tpl' */
+/* Smarty version 3.1.32, created on 2018-10-17 07:51:48
+  from 'C:\xampp\htdocs\TPE_Pastas\templates\editPasta.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bc6674a7b0029_84562073',
+  'unifunc' => 'content_5bc6cdf4007254_10202184',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '92ccc9d742e67557cb5bfdded0b946706133d1cc' => 
+    '7ac26780693c4263a2844adc1892f685ba704df0' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\TPE_Pastas\\templates\\adminPasta.tpl',
-      1 => 1539729218,
+      0 => 'C:\\xampp\\htdocs\\TPE_Pastas\\templates\\editPasta.tpl',
+      1 => 1539755506,
       2 => 'file',
     ),
   ),
@@ -22,12 +22,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc6674a7b0029_84562073 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc6cdf4007254_10202184 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <div class="row">
         <div class="col-md-6 col-center">
-            <a href="admin/">Atrás</a> 
+             
             <h1>Vista de administrador</h1>
             <p><?php echo $_smarty_tpl->tpl_vars['pasta']->value->nombre;?>
 </p>
@@ -46,7 +46,8 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                     </div>
                 </div>
           </form>
-        </div>          
+        <a href="admin/">Atrás</a>        
+        </div>  
     </div>
     
 
