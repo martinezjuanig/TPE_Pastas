@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-17 08:11:46
+/* Smarty version 3.1.32, created on 2019-02-20 19:34:18
   from 'C:\xampp\htdocs\TPE_Pastas\templates\admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bc6d2a21e47a2_28697573',
+  'unifunc' => 'content_5c6d9daa6663e4_03790104',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '367a32d4fbeffcedf2bb205522e994035e3b5f92' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_Pastas\\templates\\admin.tpl',
-      1 => 1539756704,
+      1 => 1550687645,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc6d2a21e47a2_28697573 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c6d9daa6663e4_03790104 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <h1>Vista de administrador</h1>
@@ -36,7 +36,6 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
           <th scope="col">Editar Pasta</th>
           <th scope="col">Editar Harina</th>
           <th scope="col">Borrar</th>
-    
         </tr>
       </thead>
 
@@ -63,14 +62,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['pastas']->value) {
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-
     </table>
   </div>
 </div>
 
 <div class="row ">
   <div class="col-md-9 col-center ">  
-    <form method="POST" action="savePasta">
+    <form method="POST" action="savePasta" enctype="multipart/form-data">
       <div class="row">
         <div class="col">
           <input type="text" name='pasta' class="form-control" placeholder="Ingrese Pasta" required>
@@ -88,6 +86,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['harinas']->value) {
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           </select>
+          <input type="file" name='adjunto' class="form-control-file" id="adjunto" placeholder="Imagen" accept="image/jpeg">
           <button type="submit">Agregar</button>
         </div>
       </div>

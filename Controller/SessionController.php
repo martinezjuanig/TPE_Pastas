@@ -9,7 +9,7 @@ class SessionController  {
         session_start();
 
         if(isset($_SESSION['USERNAME'])){ 
-            if (time() - $_SESSION['LAST_ACTIVITY'] >20) { 
+            if (time() - $_SESSION['LAST_ACTIVITY'] >200) { 
                     
                 header('Location:' . LOGOUT);
                 die();
@@ -19,7 +19,7 @@ class SessionController  {
         }
         else {
         
-            header('Location:' . ADMIN);
+            header('Location:' . LOGINFORM);
             
             die();
         }

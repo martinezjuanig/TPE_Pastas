@@ -27,12 +27,25 @@ class PastasModel
         
     }
 
-    function addPasta(String $nombre, String $tipo)
+    function addPasta(String $nombre, String $tipo, $img=null)
     {
+        $pathImg=null;
+        if($img){
+            $pathImg=$this->uploadImage($img);
+        }
         $sentence = $this->db_connection->prepare(
-            "INSERT INTO pasta (nombre, fk_harina) VALUES (?, ?)");
-        $sentence->execute(array($nombre, $tipo));
+            "INSERT INTO pasta (nombre, imagen, fk_harina ) VALUES (?, ?, ?)");
+        $sentence->execute(array($nombre, $pathImg, $tipo ));
+        // var_dump($sentence->errorInfo()).die();
         
+    }
+
+    private function uploadImage($image)
+    {
+        $target='img/pastas/'.uniqid().'.jpg';
+        move_uploaded_file($image, $target);
+        return $target;
+
     }
 
     function getOne($id_pasta)

@@ -10,7 +10,6 @@
           <th scope="col">Editar Pasta</th>
           <th scope="col">Editar Harina</th>
           <th scope="col">Borrar</th>
-    
         </tr>
       </thead>
 
@@ -25,14 +24,13 @@
           </tr>
         </tbody>
       {/foreach}
-
     </table>
   </div>
 </div>
 
 <div class="row ">
   <div class="col-md-9 col-center ">  
-    <form method="POST" action="savePasta">
+    <form method="POST" action="savePasta" enctype="multipart/form-data">
       <div class="row">
         <div class="col">
           <input type="text" name='pasta' class="form-control" placeholder="Ingrese Pasta" required>
@@ -41,6 +39,7 @@
               <option value={$harinas->id_harina}>{$harinas->tipo}</option>
             {/foreach}
           </select>
+          <input type="file" name='adjunto' class="form-control-file" id="adjunto" placeholder="Imagen" accept="image/jpeg">
           <button type="submit">Agregar</button>
         </div>
       </div>

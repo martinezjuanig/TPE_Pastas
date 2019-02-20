@@ -15,7 +15,12 @@
           </tr>
         </tbody>
     </table>
+     <h1>Estamos acá</h1>
+      <picture>
+        <img src="{$pasta->imagen}" class="img-fluid img-thumbnail">
+      </picture>
   </div>
+
 </div>
     
 {include file="footer.tpl"}

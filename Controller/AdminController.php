@@ -23,7 +23,7 @@ class AdminController extends SessionController
             $pasta=$_POST["pasta"];
             $tipo=$_POST["harina"];
             $model = new PastasModel();
-            $model->addPasta($pasta, $tipo);
+            $model->addPasta($pasta, $tipo, $_FILES['adjunto']['tmp_name']);
         }
 
         header('Location:' . ADMIN);
